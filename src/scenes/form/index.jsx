@@ -20,7 +20,7 @@ const phoneRegExp =
 
 const userSchema = yup.object().shape({
   firstName : yup.string().required("required"),
-  lastNAme: yup.string().required("required"),
+  lastName: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   contact: yup.string().matches(phoneRegExp, "Phone number is not valid").required("required"),
   address1: yup.string().required("required"),
@@ -124,7 +124,10 @@ const Form = () => {
                 helperText={touched.address2 && errors.address2}
                 sx={{ gridColumn: "span 4" }}
               />
+              </Box>
 
+              <Box display="flex" justifyContent="end" mt="20px" >
+                <Button type="submit" color="secondary" variant="contained">Create New User</Button> 
               </Box>
             </form>
           )}
