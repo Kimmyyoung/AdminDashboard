@@ -17,7 +17,6 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import { TokenSharp } from '@mui/icons-material';
 
 const Item = ({ title, to, icon, selected, setSelected}) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -61,7 +60,6 @@ const Sidebar = () => {
 
   <ProSidebar collapsed={isCollapse}>
       <Menu iconShape="square">
-
         <MenuItem onClick={()=>{setIsCollapse(!isCollapse)}} icon={isCollapse? <MenuOutlinedIcon /> : undefined} 
         style={{
           margin: "10px 0 10px 0",
